@@ -1,0 +1,76 @@
+# NO NEED TO USE --SAVE WITH NPM 5+
+
+# GET VERSION
+npm -v (or --version)
+
+# GET HELP
+npm help
+npm
+
+# CREATE PACKAGE.JSON // make sure you are in app folder
+
+npm init // enter if you ok with default answers
+npm init -y (or --yes) // accept all answers
+
+# SET DEFAULTS // so no more questions
+npm config set init-author-name "YOUR NAME"
+npm set init-license "MIT"
+
+# GET DEFAULTS // check defaults
+npm config get init-author-name
+npm get init-license
+
+# REMOVE DEFAULTS
+npm config delete init-author-name
+npm delete init-license
+
+# INSTALLING LOCAL PACKAGES (--flag)
+npm install lodash --save (or npm install --save lodash)
+npm install moment --save
+npm install gulp gulp-sass --save-dev  (devDependencies)
+
+# --save : saves the module to our package.json as a dependency, because modules are 3rd party you dont want to push all of them to git repositories. Just save its info to package.json file. Create a git ignore file and add node modules to it.
+
+# Run js file in git bash
+node filename.js
+
+# MOVE TO ANOTHER FOLDER OR CLONING
+npm install // looks package.json dependicies and install them, installs all dependencies
+npm install --production // only gonna install production/usual dependicies not install dev dependencies
+
+# REMOVING MODULES 
+npm uninstall gulp-sass --save-dev
+npm remove gulp --save-dev
+
+#INSTALL CERTAIN VERSIONS (@)
+npm install lodash@4.17.3 --save
+
+# UPDATE
+npm update lodash --save
+
+# INSTALL GLOBAL MODULE
+npm install -g nodemon
+npm install -g live-server
+
+# RUN NODEMON
+nodemon
+
+# FIND ROOT FOLDER
+npm root -g
+
+# REMOVE GLOBAL PACKAGES
+npm remove -g nodemon
+
+# LISTING PACKAGES
+npm list
+npm list --depth 0
+npm list --depth 1   // chess treeleri gibi
+
+# INSTALL LIVE-SERVER LOCALLY
+npm install live-server --save-dev
+
+# NPM SCRIPT
+"scripts": {
+    "start": "node index.js",
+    "dev": "live-server"
+  },
